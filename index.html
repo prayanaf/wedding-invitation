@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- SEO Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - [Nama Mempelai Pria] & [Nama Mempelai Wanita]</title>
+    <meta name="description" content="Undangan pernikahan digital yang elegan untuk [Nama Mempelai Pria] & [Nama Mempelai Wanita].">
+    <meta name="keywords" content="undangan pernikahan, wedding invitation, digital invitation">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Undangan Pernikahan - [Nama Mempelai Pria] & [Nama Mempelai Wanita]">
+    <meta property="og:description" content="Kami mengundang Anda untuk merayakan hari bahagia kami.">
+    <meta property="og:image" content="assets/images/hero-bg.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,...">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="heart-loader"></div>
+            <p>Mohon tunggu...</p>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="assets/music/romantic-bg.mp3" type="audio/mpeg">
+    </audio>
+    <div class="music-control">
+        <button id="musicToggle" class="music-btn">
+            <i class="fas fa-music"></i>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heart"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#story" class="nav-link">Cerita Cinta</a></li>
+                <li><a href="#gallery" class="nav-link">Galeri</a></li>
+                <li><a href="#event" class="nav-link">Acara</a></li>
+                <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text fade-in-up">
+                <h1 class="hero-title">
+                    Kami Menikah
+                </h1>
+                <div class="couple-names">
+                    <h2 class="groom-name">[Nama Mempelai Pria]</h2>
+                    <span class="heart-divider"> <i class="fas fa-heart"></i> </span>
+                    <h2 class="bride-name">[Nama Mempelai Wanita]</h2>
+                </div>
+                <p class="wedding-date">
+                    Minggu, 15 Desember 2024
+                </p>
+                <p class="romantic-quote">
+                    "Dua jiwa yang bertemu, satu cinta yang abadi"
+                </p>
+                <button class="cta-btn" onclick="scrollToSection('event')">
+                    Buka Undangan
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story-section">
+        <div class="container">
+            <h2 class="section-title">Cerita Cinta Kami</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in-left">
+                    <div class="timeline-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Pertemuan Pertama</h3>
+                        <p>Januari 2020 - Di sebuah kafe kecil, pandangan pertama yang mengubah segalanya</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-right">
+                    <div class="timeline-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Kencan Pertama</h3>
+                        <p>Maret 2020 - Malam penuh tawa dan cerita yang tak terlupakan</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-left">
+                    <div class="timeline-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Lamaran</h3>
+                        <p>Juni 2023 - Janji sehidup semati di tepi pantai saat matahari terbenam</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-right">
+                    <div class="timeline-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Pernikahan</h3>
+                        <p>15 Desember 2024 - Hari bahagia yang kami nantikan bersama Anda</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Galeri Prewedding</h2>
+            <div class="gallery-grid">
+                <a href="assets/images/couple-1.jpg" data-lightbox="gallery" data-title="Moment Bahagia">
+                    <img src="assets/images/couple-1.jpg" alt="Prewedding 1">
+                </a>
+                <a href="assets/images/couple-2.jpg" data-lightbox="gallery" data-title="Cinta Abadi">
+                    <img src="assets/images/couple-2.jpg" alt="Prewedding 2">
+                </a>
+                <a href="assets/images/couple-3.jpg" data-lightbox="gallery" data-title="Janji Sehidup">
+                    <img src="assets/images/couple-3.jpg" alt="Prewedding 3">
+                </a>
+                <a href="assets/images/couple-4.jpg" data-lightbox="gallery" data-title="Romantic Moment">
+                    <img src="assets/images/couple-4.jpg" alt="Prewedding 4">
+                </a>
+                <a href="assets/images/couple-5.jpg" data-lightbox="gallery" data-title="Love Forever">
+                    <img src="assets/images/couple-5.jpg" alt="Prewedding 5">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Section -->
+    <section id="event" class="event-section">
+        <div class="container">
+            <h2 class="section-title">Informasi Acara</h2>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown-container fade-in-up">
+                <h3>Hari Bahagia Tinggal</h3>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <p>Hari</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <p>Jam</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <p>Menit</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <p>Detik</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Akad Nikah -->
+            <div class="event-card akad fade-in-up">
+                <div class="event-icon">
+                    <i class="fas fa-mosque"></i>
+                </div>
+                <div class="event-details">
+                    <h3>Akad Nikah</h3>
+                    <p><i class="fas fa-calendar"></i> Minggu, 15 Desember 2024</p>
+                    <p><i class="fas fa-clock"></i> 08:00 - 10:00 WIB</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Masjid Al-Hidayah, Jl. Contoh No.123, Jakarta</p>
+                </div>
+            </div>
+
+            <!-- Resepsi -->
+            <div class="event-card resepsi fade-in-up">
+                <div class="event-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="event-details">
+                    <h3>Resepsi</h3>
+                    <p><i class="fas fa-calendar"></i> Minggu, 15 Desember 2024</p>
+                    <p><i class="fas fa-clock"></i> 11:00 - 14:00 WIB</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hotel Grand Palace, Jl. Contoh Raya No.456, Jakarta</p>
+                </div>
+            </div>
+
+            <!-- Dress Code -->
+            <div class="dress-code fade-in-up">
+                <h4>Dress Code: <span class="gold-text">Batiksemi Formal</span></h4>
+            </div>
+
+            <!-- Google Maps -->
+            <div class="maps-container fade-in-up">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.309346745825!2d106.829518614784!3d-6.208792995511964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e8b3b3b3b3%3A0x1a1a1a1a1a1a1a1a!2sJakarta%2C%20Indonesia!5e0!3m2!1sen!2sid!4v1690000000000" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="rsvp-section">
+        <div class="container">
+            <h2 class="section-title">Konfirmasi Kehadiran</h2>
+            
+            <!-- Love Quote -->
+            <div class="love-quote fade-in-up">
+                <blockquote>
+                    "Cinta sejati bukanlah tentang kesempurnaan, tetapi tentang menerima ketidaksempurnaan satu sama lain dengan penuh kasih."
+                    <cite>- Anonim</cite>
+                </blockquote>
+            </div>
+
+            <!-- RSVP Form -->
+            <div class="rsvp-container">
+                <form id="rsvpForm" class="rsvp-form">
+                    <div class="form-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text" id="guestName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Jumlah Orang</label>
+                        <select id="guestCount" required>
+                            <option value="">Pilih jumlah</option>
+                            <option value="1">1 Orang</option>
+                            <option value="2">2 Orang</option>
+                            <option value="3">3 Orang</option>
+                            <option value="4">4+ Orang</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Status Kehadiran</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="hadir" required>
+                                <span class="radio-custom"></span>
+                                Hadir
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="tidak-hadir" required>
+                                <span class="radio-custom"></span>
+                                Tidak Hadir
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Ucapan</label>
+                        <textarea id="guestMessage" rows="4" placeholder="Tulis ucapan untuk pasangan pengantin..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        Kirim Konfirmasi
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Kami mengucapkan terima kasih atas doa restu dan kehadiran Anda</p>
+                <div class="family-names">
+                    <p>Bapak/Ibu [Nama Orang Tua Pria] & Keluarga</p>
+                    <p>Bapak/Ibu [Nama Orang Tua Wanita] & Keluarga</p>
+                </div>
+                <p class="love-symbol"><i class="fas fa-heart"></i></p>
+                <p>&copy; 2024 Wedding Invitation. Dibuat dengan <i class="fas fa-heart gold-text"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
