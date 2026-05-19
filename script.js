@@ -1,5 +1,5 @@
 // ===== GLOBAL VARIABLES =====
-const weddingDate = new Date('2024-12-15T08:00:00').getTime();
+const weddingDate = new Date('2027-07-17T08:00:00').getTime();
 
 // ===== DOM ELEMENTS =====
 const loadingScreen = document.getElementById('loading-screen');
@@ -26,13 +26,27 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
 });
 
-// ===== LOADING SCREEN =====
+// ===== LOADING SCREEN - IMPROVED =====
 function hideLoadingScreen() {
-    loadingScreen.style.opacity = '0';
+    loadingScreen.classList.add('hide');
+    loadingScreen.style.visibility = 'hidden';
+    
     setTimeout(() => {
         loadingScreen.style.display = 'none';
-    }, 500);
+        document.body.style.overflow = 'auto'; // Enable scroll
+    }, 600);
 }
+
+// Tambahkan di DOMContentLoaded:
+document.addEventListener('DOMContentLoaded', function() {
+    // Prevent scroll during loading
+    document.body.style.overflow = 'hidden';
+    
+    // Loading sequence
+    setTimeout(() => {
+        hideLoadingScreen();
+    }, 2500); // 2.5 detik loading yang smooth
+});
 
 // ===== NAVIGATION =====
 function initNavigation() {
@@ -156,51 +170,6 @@ function initMusicControl() {
     }, { once: true });
 }
 
-// ===== RSVP FORM =====
-function initRSVPForm() {
-    rsvpForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        const formData = new FormData(rsvpForm);
-        const data = {
-            name: document.getElementById('guestName').value,
-            count: document.getElementById('guestCount').value,
-            attendance: document.querySelector('input[name="attendance"]:checked').value,
-            message: document.getElementById('guestMessage').value,
-            timestamp: new Date().toISOString()
-        };
-
-        try {
-            // Show loading state
-            const submitBtn = rsvpForm.querySelector('.submit-btn');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
-            submitBtn.disabled = true;
-
-            // Simulate API call (replace with your backend)
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            
-            // Store in localStorage (replace with actual API)
-            const rsvps = JSON.parse(localStorage.getItem('rsvps') || '[]');
-            rsvps.push(data);
-            localStorage.setItem('rsvps', JSON.stringify(rsvps));
-
-            // Show success message
-            showNotification('Terima kasih atas konfirmasinya!', 'success');
-            
-            // Reset form
-            rsvpForm.reset();
-
-        } catch (error) {
-            showNotification('Terjadi kesalahan, silakan coba lagi.', 'error');
-        } finally {
-            // Reset button
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-        }
-    });
-}
-
 // ===== UTILITY FUNCTIONS =====
 function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({
@@ -274,3 +243,50 @@ if ('link' in document.createElement('link')) {
         document.head.appendChild(preload);
     });
 }
+
+/* ========================================
+   GALLERY SLIDER
+======================================== */
+
+const track = document.querySelector('.gallery-track');
+const nextBtn = document.querySelector('.gallery-btn.next');
+const prevBtn = document.querySelector('.gallery-btn.prev');
+
+let currentSlide = 0;
+
+function updateSlider() {
+
+    const slideWidth =
+        document.querySelector('.gallery-slide').offsetWidth + 24;
+
+    track.style.transform =
+        `translateX(-${currentSlide * slideWidth}px)`;
+}
+
+nextBtn.addEventListener('click', () => {
+
+    const slides =
+        document.querySelectorAll('.gallery-slide');
+
+    if(currentSlide < slides.length - 1){
+        currentSlide++;
+    } else {
+        currentSlide = 0;
+    }
+
+    updateSlider();
+});
+
+prevBtn.addEventListener('click', () => {
+
+    const slides =
+        document.querySelectorAll('.gallery-slide');
+
+    if(currentSlide > 0){
+        currentSlide--;
+    } else {
+        currentSlide = slides.length - 1;
+    }
+
+    updateSlider();
+});
