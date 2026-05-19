@@ -517,7 +517,11 @@ section{
    GALLERY
 ===================================================== */
 .gallery-section{
-    background:var(--soft-beige);
+    background:linear-gradient(
+        180deg,
+        #FAF1E7 0%,
+        #F6E4C8 100%
+    );
 }
 
 .gallery-grid{
@@ -664,9 +668,11 @@ section{
    FOOTER
 ===================================================== */
 .footer{
-    background:var(--soft-beige);
-
-    color:rgb(73, 60, 51);
+        background:linear-gradient(
+        180deg,
+        #FAF1E7 0%,
+        #F6E4C8 100%
+    );
 
     text-align:center;
 
@@ -1050,7 +1056,7 @@ section{
 }
 
 .dresscode-box{
-    background: rgba(255,255,255,0.04);
+    background: rgba(46, 78, 48, 0.993);
     border: 1px solid rgba(255,255,255,0.08);
 
     padding: 35px 45px;
@@ -1090,7 +1096,7 @@ section{
 .dresscode-box h4{
     font-family:'Playfair Display', serif;
     font-size:2rem;
-    color:#2e2517;
+    color:#f1e4cd;
 
     margin-bottom:10px;
     letter-spacing:1px;
@@ -1132,7 +1138,7 @@ section{
     border:3px solid rgba(255,255,255,0.2);
 
     box-shadow:
-        0 5px 20px rgba(0,0,0,0.25);
+        0 5px 20px rgba(245, 217, 217, 0.637);
 
     transition:0.3s ease;
 }
@@ -1143,18 +1149,11 @@ section{
 
 /* warna */
 .color-circle.cream{
-    background:#F9F6F2;
+    background:#eedec9;
 }
 
 .color-circle.beige{
-    background:#f1ce94;
-}
-
-/* kode warna */
-.palette-item small{
-    color:rgba(255,255,255,0.7);
-    font-size:0.8rem;
-    letter-spacing:1px;
+    background:#422c07;
 }
 
 /* animasi floating */
