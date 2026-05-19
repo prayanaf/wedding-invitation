@@ -53,9 +53,9 @@ body{
     background:
     linear-gradient(
         135deg,
-        #F9F6F2 0%,
-        #F1D6AB 45%,
-        #A0855B 100%
+        #bac979cc 0%,
+        #eee4a9 45%,
+        #2e2009da 100%
     );
 
     display:flex;
