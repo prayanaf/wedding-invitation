@@ -292,10 +292,6 @@ body{
 /* =====================================================
    HERO
 ===================================================== */
-/* =====================================================
-   HERO RESPONSIVE MOBILE FIX
-===================================================== */
-
 .hero{
     min-height:100vh;
 
@@ -305,34 +301,16 @@ body{
     text-align:center;
 
     position:relative;
-    overflow:hidden;
-
-    background-image:url('assets/images/hero2.png');
-
-    background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
-
-    padding:120px 20px;
-}
-
-/* overlay tipis aesthetic */
-.hero::before{
-    content:'';
-
-    position:absolute;
-    inset:0;
 
     background:
-    linear-gradient(
-        rgba(56,71,11,0.18),
-        rgba(56,71,11,0.18)
-    );
-
-    z-index:1;
+    /*linear-gradient(
+        rgba(56,71,11,0.45),
+        rgba(56,71,11,0.45)
+    ),*/
+    url('assets/images/hero2.png')
+    center/cover no-repeat;
 }
 
-/* content */
 .hero-content{
     position:relative;
     z-index:2;
@@ -341,7 +319,6 @@ body{
     padding:0 2rem;
 }
 
-/* title */
 .hero-title{
     font-family:'Playfair Display',serif;
 
@@ -350,43 +327,6 @@ body{
     color:white;
 
     margin-bottom:1rem;
-
-    text-shadow:
-    0 4px 20px rgba(0,0,0,0.25);
-}
-
-/* =====================================================
-   MOBILE RESPONSIVE
-===================================================== */
-
-@media(max-width:768px){
-
-    .hero{
-
-        min-height:100vh;
-
-        background-size:contain;
-
-        background-position:center top;
-
-        background-repeat:no-repeat;
-
-        background-color:#F9F6F2;
-
-        padding-top:140px;
-        padding-bottom:80px;
-    }
-
-    .hero-content{
-        padding:0 1.2rem;
-    }
-
-    .hero-title{
-        font-size:clamp(2rem,10vw,3.8rem);
-
-        line-height:1.2;
-    }
-
 }
 
 .couple-names{
